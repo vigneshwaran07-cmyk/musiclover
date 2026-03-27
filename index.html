@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vigneshwaran </title>
+  <title>Tea Lover Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #1f1c2c;
-      --text: white;
+      --bg: #2e3d2f;
+      --text: #f5f5dc;
       --card: rgba(255,255,255,0.1);
+      --accent: #a3c585;
     }
 
     body.light {
-      --bg: #f5f5f5;
-      --text: #111;
+      --bg: #fdf6e3;
+      --text: #3b2f2f;
       --card: rgba(0,0,0,0.05);
+      --accent: #6b8e23;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
@@ -35,7 +37,7 @@
       backdrop-filter: blur(10px);
     }
 
-    header h1 { color: #00f7ff; }
+    header h1 { color: var(--accent); }
 
     nav a {
       margin: 0 15px;
@@ -45,7 +47,7 @@
 
     .toggle-btn {
       padding: 8px 15px;
-      background: #00f7ff;
+      background: var(--accent);
       border: none;
       border-radius: 20px;
       cursor: pointer;
@@ -64,14 +66,23 @@
       align-items: center;
     }
 
+    .hero h2 {
+      font-size: 45px;
+    }
+
     .typing {
-      color: #00f7ff;
+      color: var(--accent);
       border-right: 2px solid;
       animation: blink 0.7s infinite;
     }
 
     @keyframes blink {
       50% { border-color: transparent; }
+    }
+
+    .tea-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
     }
 
     .projects {
@@ -89,7 +100,7 @@
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 20px #00f7ff;
+      box-shadow: 0 0 20px var(--accent);
     }
 
     footer {
@@ -102,42 +113,43 @@
 <body>
 
 <header>
-  <h1>Aswin Raj</h1>
+  <h1>🍃 Tea Lover</h1>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#projects">Tea Collection</a>
     <a href="#contact">Contact</a>
   </nav>
   <button class="toggle-btn" onclick="toggleMode()">🌙</button>
 </header>
 
 <section class="hero" id="home">
-  <h2>Hello, I'm <span class="typing"></span></h2>
-  <p>Web Developer | Designer | Student</p>
+  <div class="tea-icon">☕</div>
+  <h2>I'm <span class="typing"></span></h2>
+  <p>Tea Enthusiast | Nature Lover | Creator</p>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am Aswin Raj, a passionate web developer.</p>
+  <p>I love tea, calm vibes, and creating beautiful things inspired by nature 🍃</p>
 </section>
 
 <section id="projects">
-  <h2>My Projects</h2>
+  <h2>My Tea Collection</h2>
   <div class="projects">
-    <div class="card">Project 1</div>
-    <div class="card">Project 2</div>
-    <div class="card">Project 3</div>
+    <div class="card">Green Tea 🍵</div>
+    <div class="card">Masala Tea ☕</div>
+    <div class="card">Herbal Tea 🌿</div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact Me</h2>
-  <p>Email: aswin@email.com</p>
+  <p>Email: tea@email.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Aswin Raj</p>
+  <p>🍃 Made with Love & Tea</p>
 </footer>
 
 <script>
@@ -145,7 +157,7 @@
     document.body.classList.toggle('light');
   }
 
-  const text = ["Aswin Raj", "Web Developer", "Designer"];
+  const text = ["Tea Lover", "Chai Addict", "Nature Soul"];
   let count = 0;
   let index = 0;
   let currentText = '';
